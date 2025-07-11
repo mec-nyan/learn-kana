@@ -1,0 +1,9 @@
+:root {
+
+}
+
+html, body {
+	font-family: sans-serif;
+	background: hsl(243, 20%, 15%);
+	color: hsl(42, 30%, 70%);
+}
