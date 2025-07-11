@@ -7,6 +7,13 @@
 	font-family: "HackNerdFontPropo", "Hack", monospace;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: inherit;
+}
+
 html, body {
 	font-family: sans-serif;
 	background: hsl(243, 20%, 15%);

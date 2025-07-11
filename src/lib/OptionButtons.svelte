@@ -10,12 +10,17 @@
 <div id="option-buttons">
 	{#each options as { icon, name }}
 		<div class="opt">
-			<span class="nerd-icon {name}">${icon}</span>
+			<span class="nerd-icon {name}">{icon}</span>
 		</div>
 	{/each}
 </div>
 
 <style>
+	@font-face {
+		font-family: "HackNerdFontPropo";
+		src: local("Hack Nerd Font Propo Regular")
+	}
+
 	#option-buttons {
 		/* border: 1px solid lightblue; */
 		display: grid;
@@ -37,5 +42,6 @@
 		align-items: center;
 		height: 3lh;
 		cursor: pointer;
+		font-family: "HackNerdFontPropo";
 	}
 </style>

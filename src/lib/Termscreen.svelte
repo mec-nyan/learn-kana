@@ -41,18 +41,25 @@
 	});
 </script>
 
-<div id="term" bind:this={term}></div>
+<div id="top-container">
+	<div id="term" bind:this={term}></div>
+</div>
 
 <style>
 	@font-face {
 		font-family: "HackNerdFontPropo";
-		src: local("Hack Nerd Font Propo Regular")
+		src: local("Hack Nerd Font Propo Regular");
+	}
+
+	#top-container {
+		padding: 0.25rem;
+		width: 100%;
 	}
 
 	#term {
 		background: hsl(243, 10%, 10%);
 		width: 100%;
-		min-height: calc(1rem + 5lh);
+		min-height: calc(2rem + 5lh);
 		color: hsl(243, 10%, 50%);
 		padding: 0.5rem;
 		font-family: "HackNerdFontPropo", monospace;
