@@ -1,5 +1,10 @@
-:root {
+@font-face {
+	font-family: "HackNerdFontPropo";
+	src: url('/static/fonts/HackNerdFontPropo-Regular.ttf') format('truetype');
+}
 
+:root {
+	font-family: "HackNerdFontPropo", "Hack", monospace;
 }
 
 html, body {

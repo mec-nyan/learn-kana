@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
 
 	let term: HTMLDivElement;
 
 	// Initial content.
 	let term_content = [
-		"Welcome to kana-app!",
+		"Welcome to kana-app! ",
 		"",
 		"I'll help you learn hiragana and katakana!",
 		"",
@@ -38,19 +38,24 @@
 
 	onMount(() => {
 		write(term_content);
-	})
+	});
 </script>
 
 <div id="term" bind:this={term}></div>
 
 <style>
+	@font-face {
+		font-family: "HackNerdFontPropo";
+		src: local("Hack Nerd Font Propo Regular")
+	}
+
 	#term {
 		background: hsl(243, 10%, 10%);
 		width: 100%;
 		min-height: calc(1rem + 5lh);
 		color: hsl(243, 10%, 50%);
 		padding: 0.5rem;
-		font-family: "Hack", monospace;
+		font-family: "HackNerdFontPropo", monospace;
 		font-size: 0.7rem;
 	}
 </style>
