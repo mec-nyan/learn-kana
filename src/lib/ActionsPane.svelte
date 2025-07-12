@@ -1,9 +1,11 @@
 <script lang="ts">
 	import OptionButtons from "./OptionButtons.svelte";
+	import Start from "./Start.svelte";
 </script>
 
 <div id="actions">
 	<OptionButtons />
+	<Start />
 </div>
 
 <style>

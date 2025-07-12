@@ -4,13 +4,15 @@
 	let term: HTMLDivElement;
 
 	// Initial content.
-	let {term_content = [
-		"Welcome to kana-app! ",
-		"",
-		"I'll help you learn hiragana and katakana!",
-		"",
-		"Are you ready?",
-	]} = $props();
+	let {
+		term_content = [
+			"Welcome to kana-app! ",
+			"",
+			"I'll help you learn hiragana and katakana!",
+			"",
+			"Are you ready?",
+		],
+	} = $props();
 
 	function sleep(ms: number) {
 		return new Promise((resolve) => setTimeout(resolve, ms));
