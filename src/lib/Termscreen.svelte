@@ -4,13 +4,13 @@
 	let term: HTMLDivElement;
 
 	// Initial content.
-	let term_content = [
+	let {term_content = [
 		"Welcome to kana-app! ",
 		"",
 		"I'll help you learn hiragana and katakana!",
 		"",
 		"Are you ready?",
-	];
+	]} = $props();
 
 	function sleep(ms: number) {
 		return new Promise((resolve) => setTimeout(resolve, ms));
@@ -59,7 +59,8 @@
 	#term {
 		background: hsl(243, 10%, 10%);
 		width: 100%;
-		min-height: calc(2rem + 5lh);
+		/* The "terminal" will fit five lines. */
+		min-height: calc(1rem + 5lh);
 		color: hsl(243, 10%, 50%);
 		padding: 0.5rem;
 		font-family: "HackNerdFontPropo", monospace;
