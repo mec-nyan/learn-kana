@@ -1,5 +1,21 @@
-<script lang="ts"></script>
+<script lang="ts">
+	let { kana = "@" } = $props();
+</script>
 
-<div id="kana"></div>
+<div class="kana">
+	{kana}
+</div>
 
-<style></style>
+<style>
+	.kana {
+		/* border: 2px solid blue; */
+
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16rem;
+		/* TODO: Japanese font style (mincho, gothic, calligraphy) */
+		font-family: mincho;
+	}
+</style>
