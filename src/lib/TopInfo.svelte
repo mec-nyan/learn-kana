@@ -8,44 +8,34 @@
 	let hinted = $state(false);
 </script>
 
-<div id="top-container">
-	<div id="top-info">
+<div id="top-info">
+	<div class="info">
+		<span
+			>Mode: <span class="info-highlighted">ひらがな</span> (hiragana)</span
+		>
+	</div>
+	<div class="drill-info"></div>
+	<div id="progress">
 		<div class="info">
 			<span
-				>Mode: <span class="info-highlighted">ひらがな</span> (hiragana)</span
-			>
-		</div>
-		<div class="drill-info"></div>
-		<div id="progress">
-			<div class="info">
-				<span
-					>Progress:&nbsp;<span class="info-highlighted"
-						>{percentage}%</span
-					></span
-				>
-			</div>
-			<div id="bar">
-				<div id="inner"></div>
-			</div>
-		</div>
-		<div id="score-display" class="info">
-			<span
-				>Score: <span class="info-highlighted">{total_score}</span
+				>Progress:&nbsp;<span class="info-highlighted"
+					>{percentage}%</span
 				></span
 			>
 		</div>
-		<div id="hint" class="info">
-			<span>Hint:</span>
+		<div id="bar">
+			<div id="inner"></div>
 		</div>
+	</div>
+	<div id="score-display" class="info">
+		<span>Score: <span class="info-highlighted">{total_score}</span></span>
+	</div>
+	<div id="hint" class="info">
+		<span>Hint:</span>
 	</div>
 </div>
 
 <style>
-	#top-container {
-		padding: 0.25rem;
-		width: 100%;
-	}
-
 	#top-info {
 		/* border: 1px solid orange; */
 
