@@ -1,11 +1,14 @@
 <script lang="ts">
 	import Termscreen from "$lib/Termscreen.svelte";
 	import ActionsPane from "$lib/ActionsPane.svelte";
-    import Footer from "$lib/Footer.svelte";
+	import Footer from "$lib/Footer.svelte";
+	import TopContainer from "$lib/TopContainer.svelte";
 </script>
 
 <div class="root">
-	<Termscreen />
+	<TopContainer>
+		<Termscreen />
+	</TopContainer>
 	<ActionsPane />
 	<Footer />
 </div>

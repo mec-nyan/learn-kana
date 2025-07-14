@@ -1,9 +1,12 @@
 <script lang="ts">
+	import TopContainer from "$lib/TopContainer.svelte";
 	import TopInfo from "$lib/TopInfo.svelte";
 </script>
 
 <div>
-	<TopInfo />
+	<TopContainer>
+		<TopInfo />
+	</TopContainer>
 </div>
 
 <style>
