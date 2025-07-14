@@ -1,15 +1,13 @@
 <script lang="ts">
-	import OptionButtons from "./OptionButtons.svelte";
-	import Start from "./Start.svelte";
+	let { children } = $props();
 </script>
 
-<div id="actions">
-	<OptionButtons />
-	<Start />
+<div>
+	{@render children()}
 </div>
 
 <style>
-	#actions {
+	div {
 		/* border: 1px solid orange; */
 
 		width: 100%;
