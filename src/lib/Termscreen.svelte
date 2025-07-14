@@ -29,7 +29,7 @@
 				} else {
 					term.innerHTML = `<p>${output}<span class="blink">_<span></p>`;
 				}
-				await sleep(50);
+				await sleep(35);
 			}
 			if (line !== "") {
 				await sleep(600);
@@ -67,5 +67,21 @@
 		padding: 0.5rem;
 		font-family: "HackNerdFontPropo", monospace;
 		font-size: 0.7rem;
+	}
+
+	:global(.blink) {
+		animation: blink-animation 1s steps(1, start) infinite;
+	}
+
+	@keyframes blink-animation {
+		0% {
+			visibility: visible;
+		}
+		50% {
+			visibility: hidden;
+		}
+		100% {
+			visibility: visible;
+		}
 	}
 </style>
