@@ -11,6 +11,7 @@
 		/* border: 2px solid blue; */
 
 		flex: 1;
+		max-height: 1.2lh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
