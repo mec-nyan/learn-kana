@@ -17,6 +17,6 @@
 		align-items: center;
 		font-size: 16rem;
 		/* TODO: Japanese font style (mincho, gothic, calligraphy) */
-		font-family: mincho;
+		font-family: serif;
 	}
 </style>

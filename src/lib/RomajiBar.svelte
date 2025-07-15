@@ -1,7 +1,15 @@
 <script lang="ts">
 	let { buttons } = $props();
 
-	let handleClick = () => {};
+	interface kana {
+		romaji: string
+		hiragana: string
+	};
+
+	let handleClick = (e: Event, btn: kana) => {
+		e.preventDefault();
+		console.log(btn.romaji);
+	};
 </script>
 
 <div class="bar">
@@ -9,8 +17,8 @@
 		<!-- TODO: Check for ignored buttons. -->
 		<button
 			class="romaji-button no-select"
-			oncontextmenu={(e) => e.preventDefault()}
-			onclick={() => handleClick()}
+			oncontextmenu={(e: Event) => e.preventDefault()}
+			onclick={(e: Event) => handleClick(e, btn)}
 		>
 			{btn.romaji}
 		</button>
