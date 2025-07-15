@@ -7,11 +7,33 @@
 	import Kana from "$lib/Kana.svelte";
 	import Separator from "$lib/Separator.svelte";
 	import RomajiBar from "$lib/RomajiBar.svelte";
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
+	let width = window.innerWidth;
+	let height = window.innerHeight;
+
+	let updateSize = () => {
+		width = window.innerWidth;
+		height = window.innerHeight;
+	};
+
+	onMount(() => {
+		window.addEventListener("resize", updateSize);
+		return () => window.removeEventListener("resize", updateSize);
+	});
+
+	interface kana {
+		romaji: string;
+		hiragana: string;
+	}
+
+	interface kanaRow {
+		name: string;
+		kanas: kana[];
+	}
 
 	// Hiragana chart.
 	// This may go into a "module".
-	const kana_map = [
+	const kana_map: kanaRow[] = [
 		{
 			name: "a",
 			kanas: [
@@ -112,18 +134,7 @@
 		},
 	];
 
-	let width = window.innerWidth;
-	let height = window.innerHeight;
-
-	let updateSize = () => {
-		width = window.innerWidth;
-		height = window.innerHeight;
-	}
-
-	onMount(() => {
-		window.addEventListener("resize", updateSize);
-		return () => window.removeEventListener("resize", updateSize);
-	})
+	let currentRow = kana_map[0].kanas;
 </script>
 
 <Root>
@@ -131,10 +142,10 @@
 		<TopInfo />
 	</TopContainer>
 
-	<MainPane mode="dev" width={width} height={height}>
-		<Kana kana={kana_map[1].kanas[0].hiragana}/>
+	<MainPane mode="dev" {width} {height}>
+		<Kana kana={currentRow[0].hiragana} />
 		<Separator />
-		<RomajiBar buttons={kana_map[1].kanas}/>
+		<RomajiBar buttons={currentRow} />
 	</MainPane>
 	<Footer />
 </Root>
