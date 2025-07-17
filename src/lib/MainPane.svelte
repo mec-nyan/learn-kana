@@ -14,18 +14,22 @@
 			}
 			count = 0;
 		}
-	}
+	};
+
+	let hidden = "[?]";
 </script>
 
-<div id="main" on:click={tap}>
+<div id="main">
 	{@render children()}
 
 	<!-- Some development info -->
-	{#if mode === "dev"}
-		<div class="dev">
-			<span class="info">h: {height} - w: {width}</span>
-		</div>
-	{/if}
+	<div class="dev" on:click={tap}>
+		{#if mode === "dev"}
+			<span class="devinfo no-select">h: {height} - w: {width}</span>
+		{:else}
+			<span class="devinfo hidden no-select">{hidden}</span>
+		{/if}
+	</div>
 </div>
 
 <style>
@@ -48,9 +52,22 @@
 		background: transparent;
 	}
 
-	.info {
-		color: #eba0ac !important;
+	.devinfo {
+		color: #eba0ac;
 		font-size: 0.8rem;
 		font-family: "HackNerdFontPropo", monospace;
+		cursor: pointer;
+	}
+
+	.hidden {
+		color: #bac2de;
+		opacity: 0.5;
+	}
+
+	.no-select {
+		user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		touch-action: manipulation;
 	}
 </style>
