@@ -1,7 +1,7 @@
 <script lang="ts">
 	const options = [
 		{ icon: " ", name: "options", path: "/options" },
-		{ icon: "󰋖 ", name: "...", path: "" },
+		{ icon: "󰋖 ", name: "...", path: "/help" },
 		{ icon: " ", name: "...", path: "" },
 		{ icon: " ", name: "dev", path: "/developer" },
 	];
