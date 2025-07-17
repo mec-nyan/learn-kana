@@ -12,7 +12,9 @@
 
 	import { onMount } from "svelte";
 
-	import {width, height, updateSize} from "$lib/window_size/window_size";
+	import {ScreenSize} from "$lib/window_size/window_size";
+
+	let ss = new ScreenSize(window);
 
 	onMount(() => {
 		window.addEventListener("resize", () => updateSize(window, width, height));
