@@ -1,8 +1,23 @@
 <script lang="ts">
-	let { mode, width, height, children } = $props();
+	let { width, height, children } = $props();
+
+	let mode = $state("");
+	let count = $state(0);
+	let tap = () => {
+		console.log(`tap! ${count}`);
+		count++;
+		if (count === 5) {
+			if (mode === "") {
+				mode = "dev";
+			} else {
+				mode = "";
+			}
+			count = 0;
+		}
+	}
 </script>
 
-<div id="main">
+<div id="main" on:click={tap}>
 	{@render children()}
 
 	<!-- Some development info -->

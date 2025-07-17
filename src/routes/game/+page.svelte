@@ -12,8 +12,8 @@
 
 	import { onMount } from "svelte";
 
-	let width = 0;
-	let height = 0;
+	let width = window.innerWidth;
+	let height = window.innerHeight;
 
 	let updateSize = () => {
 		width = window.innerWidth;
@@ -21,7 +21,6 @@
 	};
 
 	onMount(() => {
-		updateSize();
 		window.addEventListener("resize", updateSize);
 		return () => window.removeEventListener("resize", updateSize);
 	});
@@ -34,7 +33,7 @@
 		<TopInfo />
 	</TopContainer>
 
-	<MainPane mode="dev" {width} {height}>
+	<MainPane {width} {height}>
 		<Kana kana={currentRow[0].hiragana} />
 		<Separator />
 		<RomajiBar buttons={currentRow} />
