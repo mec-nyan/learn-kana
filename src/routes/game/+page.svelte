@@ -12,13 +12,18 @@
 
 	import { onMount } from "svelte";
 
-	import {ScreenSize} from "$lib/window_size/window_size";
+	let width = 0;
+	let height = 0;
 
-	let ss = new ScreenSize(window);
+	let updateSize = () => {
+		width = window.innerWidth;
+		height = window.innerHeight;
+	};
 
 	onMount(() => {
-		window.addEventListener("resize", () => updateSize(window, width, height));
-		return () => window.removeEventListener("resize", () => updateSize(window, width, height));
+		updateSize();
+		window.addEventListener("resize", updateSize);
+		return () => window.removeEventListener("resize", updateSize);
 	});
 
 	let currentRow = kana_map[0].kanas;

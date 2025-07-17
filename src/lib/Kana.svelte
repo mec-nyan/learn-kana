@@ -2,12 +2,10 @@
 	let { kana = "@" } = $props();
 </script>
 
-<div class="kana">
-	{kana}
-</div>
+<div>{kana}</div>
 
 <style>
-	.kana {
+	div {
 		/* border: 2px solid blue; */
 
 		flex: 1;
@@ -15,8 +13,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-family: "IPAMincho", "TakaoMincho", "serif", serif;
 		font-size: 16rem;
-		/* TODO: Japanese font style (mincho, gothic, calligraphy) */
-		font-family: serif;
 	}
 </style>
