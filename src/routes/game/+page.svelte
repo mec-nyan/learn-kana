@@ -15,8 +15,8 @@
 	import {width, height, updateSize} from "$lib/window_size/window_size";
 
 	onMount(() => {
-		window.addEventListener("resize", updateSize);
-		return () => window.removeEventListener("resize", updateSize);
+		window.addEventListener("resize", () => updateSize(window, width, height));
+		return () => window.removeEventListener("resize", () => updateSize(window, width, height));
 	});
 
 	let currentRow = kana_map[0].kanas;
