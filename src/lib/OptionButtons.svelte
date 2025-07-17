@@ -3,7 +3,7 @@
 		{ icon: " ", name: "options", path: "/options" },
 		{ icon: "󰋖 ", name: "...", path: "" },
 		{ icon: " ", name: "...", path: "" },
-		{ icon: " ", name: "dev", path: "" },
+		{ icon: " ", name: "dev", path: "/developer" },
 	];
 </script>
 
