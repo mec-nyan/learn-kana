@@ -6,6 +6,9 @@
 	import OptionButtons from "$lib/OptionButtons.svelte";
 	import Start from "$lib/Start.svelte";
 	import Footer from "$lib/Footer.svelte";
+
+	let height = window.innerHeight;
+	let width = window.innerWidth;
 </script>
 
 <Root>
@@ -13,7 +16,7 @@
 		<Termscreen />
 	</TopContainer>
 
-	<MainPane>
+	<MainPane height={height} width={width}>
 		<OptionButtons />
 		<Start />
 	</MainPane>

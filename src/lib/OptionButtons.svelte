@@ -32,21 +32,23 @@
 	}
 
 	.opt {
-		background: hsl(243, 20%, 20%);
-		color: hsl(243, 10%, 40%);
 		width: 100%;
-		font-size: 2rem;
-		border-radius: 6px;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 3lh;
-		cursor: pointer;
-		font-family: "HackNerdFontPropo";
 	}
 
 	a {
-		color: inherit;
+		display: flex;
+		justify-content: center;
+		background: hsl(243, 20%, 20%);
+		color: hsl(243, 10%, 40%);
+		align-items: center;
+		height: 100%;
+		width: 100%;
 		text-decoration: none;
+		font-family: "HackNerdFontPropo";
+		border-radius: 6px;
+		font-size: 3rem;
+		height: 2lh;
+		cursor: pointer;
 	}
 </style>
