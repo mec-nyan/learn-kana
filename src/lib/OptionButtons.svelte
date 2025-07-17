@@ -1,16 +1,16 @@
 <script lang="ts">
 	const options = [
-		{ icon: " ", name: "config" },
-		{ icon: "󰋖 ", name: "..." },
-		{ icon: " ", name: "..." },
-		{ icon: " ", name: "dev" },
+		{ icon: " ", name: "options", path: "/options" },
+		{ icon: "󰋖 ", name: "...", path: "" },
+		{ icon: " ", name: "...", path: "" },
+		{ icon: " ", name: "dev", path: "" },
 	];
 </script>
 
 <div id="option-buttons">
-	{#each options as { icon, name }}
+	{#each options as { icon, name, path }}
 		<div class="opt">
-			<span class="nerd-icon {name}">{icon}</span>
+			<a href={path} class="nerd-icon {name}">{icon}</a>
 		</div>
 	{/each}
 </div>
@@ -18,7 +18,7 @@
 <style>
 	@font-face {
 		font-family: "HackNerdFontPropo";
-		src: local("Hack Nerd Font Propo Regular")
+		src: local("Hack Nerd Font Propo Regular");
 	}
 
 	#option-buttons {
@@ -43,5 +43,10 @@
 		height: 3lh;
 		cursor: pointer;
 		font-family: "HackNerdFontPropo";
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
 </style>
