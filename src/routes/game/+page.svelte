@@ -11,13 +11,8 @@
 	import RomajiBar from "$lib/RomajiBar.svelte";
 
 	import { onMount } from "svelte";
-	let width = window.innerWidth;
-	let height = window.innerHeight;
 
-	let updateSize = () => {
-		width = window.innerWidth;
-		height = window.innerHeight;
-	};
+	import {width, height, updateSize} from "$lib/window_size/window_size";
 
 	onMount(() => {
 		window.addEventListener("resize", updateSize);
