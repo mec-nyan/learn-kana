@@ -22,33 +22,43 @@
 	}
 
 	#option-buttons {
-		/* border: 1px solid lightblue; */
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, auto);
 		gap: 1rem;
+
 		width: 60%;
 		margin-bottom: 1rem;
+
+		/* border: 1px solid lightblue; */
 	}
 
 	.opt {
-		width: 100%;
 		display: flex;
+
+		width: 100%;
+		aspect-ratio: 1/1;
+		/* border: 1px solid yellowgreen; */
 	}
 
 	a {
 		display: flex;
 		justify-content: center;
+		align-items: center;
+
 		background: hsl(243, 20%, 20%);
 		color: hsl(243, 10%, 40%);
-		align-items: center;
+
 		height: 100%;
 		width: 100%;
-		text-decoration: none;
-		font-family: "HackNerdFontPropo";
-		border-radius: 6px;
+
 		font-size: 3rem;
-		height: 2lh;
+		font-family: "HackNerdFontPropo";
+		text-decoration: none;
+
+		border-radius: 8px;
+
 		cursor: pointer;
+		/* border: 1px solid orange; */
 	}
 </style>
