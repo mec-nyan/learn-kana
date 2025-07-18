@@ -16,6 +16,10 @@
 		}
 	};
 
+	// TODO: Make somthing useful if the user is using a keybord to navigate the app.
+	// I.e. if element is focused (with "tab") and the user presses enter 5 times...
+	let noop = () => {};
+
 	let hidden = "[?]";
 </script>
 
@@ -23,7 +27,7 @@
 	{@render children()}
 
 	<!-- Some development info -->
-	<div class="dev" on:click={tap}>
+	<div role="button" tabindex=0 class="dev" onclick={tap} onkeydown={noop}>
 		{#if mode === "dev"}
 			<span class="devinfo no-select">h: {height} - w: {width}</span>
 		{:else}

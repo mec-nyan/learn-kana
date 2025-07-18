@@ -7,8 +7,8 @@
 	import Start from "$lib/Start.svelte";
 	import Footer from "$lib/Footer.svelte";
 
-	let height = window.innerHeight;
-	let width = window.innerWidth;
+	let height = 0;
+	let width = 0;
 </script>
 
 <Root>
