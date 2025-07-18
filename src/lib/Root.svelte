@@ -8,13 +8,20 @@
 
 <style>
 	div {
-		/* border: 4px solid lightblue; */
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+
+		background: linear-gradient(
+			to bottom,
+			var(--base),
+			var(--mantle)
+		);
+
 		height: 100dvh;
 		width: 100dvw;
 		/* padding: 2rem; */
+		/* border: 4px solid lightblue; */
 	}
 </style>

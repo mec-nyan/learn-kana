@@ -6,14 +6,17 @@
 
 <style>
 	div {
-		/* border: 2px solid blue; */
-
 		flex: 1;
-		max-height: 1.2lh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		max-height: 1.2lh;
+
 		font-family: "IPAMincho", "TakaoMincho", "serif", serif;
 		font-size: 16rem;
+
+		color: var(--yellow);
+
+		/* border: 2px solid blue; */
 	}
 </style>
