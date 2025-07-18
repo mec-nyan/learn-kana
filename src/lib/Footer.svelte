@@ -8,11 +8,13 @@
 <style>
 	div {
 		padding: 0.5rem;
-		color: hsl(243, 20%, 50%);
+
+		color: var(--overlay1);
+
 		font-size: 0.7rem;
 	}
 
 	.green {
-		color: hsl(150, 50%, 50%);
+		color: var(--teal);
 	}
 </style>

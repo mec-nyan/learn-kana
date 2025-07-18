@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 	import { onMount } from "svelte";
 
 	let term: HTMLDivElement;
@@ -59,12 +60,14 @@
 	}
 
 	#term {
-		background: hsl(243, 10%, 10%);
+		background: var(--crust);
+		color: var(--overlay1);
+
 		width: 100%;
 		/* The "terminal" will fit five lines. */
 		min-height: calc(1rem + 5lh);
-		color: hsl(243, 10%, 50%);
 		padding: 0.5rem;
+
 		font-family: "HackNerdFontPropo", monospace;
 		font-size: 0.7rem;
 	}
