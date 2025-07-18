@@ -12,8 +12,8 @@
 
 	import { onMount } from "svelte";
 
-	let width = window.innerWidth;
-	let height = window.innerHeight;
+	let width: number;
+	let height: number;
 
 	let updateSize = () => {
 		width = window.innerWidth;
@@ -21,6 +21,7 @@
 	};
 
 	onMount(() => {
+		updateSize();
 		window.addEventListener("resize", updateSize);
 		return () => window.removeEventListener("resize", updateSize);
 	});

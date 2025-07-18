@@ -7,8 +7,15 @@
 	import Start from "$lib/Start.svelte";
 	import Footer from "$lib/Footer.svelte";
 
+    import { onMount } from "svelte";
+
 	let height = 0;
 	let width = 0;
+
+	onMount(() => {
+		height = window.innerHeight;
+		width = window.innerWidth;
+	})
 </script>
 
 <Root>
