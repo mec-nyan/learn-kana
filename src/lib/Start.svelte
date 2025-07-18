@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 </script>
 
 <div><a href="/game">Start</a></div>
@@ -8,17 +9,25 @@
 		width: 60%;
 	}
 	a {
-		background: hsl(243, 20%, 18%);
-		border: 1px solid hsl(243, 10%, 30%);
+		display: flex;
+		justify-content: center;
+
+		width: 100%;
+		padding: 1rem;
+
+		background: var(--mantle);
+		color: var(--lavender);
+		text-shadow: 0px 0px 6px var(--lavender), 0px 0px 12px var(--lavender);
+
 		font-family: "Hack", monospace;
 		font-size: 1.25rem;
 		text-decoration: none;
-		border-radius: 8px;
+
 		cursor: pointer;
-		color: inherit;
-		width: 100%;
-		padding: 1rem;
-		display: flex;
-		justify-content: center;
+
+		box-shadow: 0px 0px 6px var(--lavender);
+
+		border-radius: 8px;
+		/* border: 1px solid var(--crust); */
 	}
 </style>

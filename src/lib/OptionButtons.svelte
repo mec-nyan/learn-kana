@@ -46,8 +46,9 @@
 		justify-content: center;
 		align-items: center;
 
-		background: hsl(243, 20%, 20%);
-		color: hsl(243, 10%, 40%);
+		background: linear-gradient(to bottom, var(--mantle), var(--crust));
+		color: var(--lavender);
+		text-shadow: 0px 0px 6px var(--lavender), 0px 0px 12px var(--lavender);
 
 		height: 100%;
 		width: 100%;
@@ -57,6 +58,7 @@
 		text-decoration: none;
 
 		border-radius: 8px;
+		border: 1px solid var(--crust);
 
 		cursor: pointer;
 		/* border: 1px solid orange; */
